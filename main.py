@@ -56,14 +56,14 @@ plt.show()
 
 # Будувати діаграму Парето
 sorted_sample = np.sort(sample)[::-1]
-cum_freq = np.cumsum(sorted_sample) / np.sum(sorted_sample)
+freq = np.cumsum(sorted_sample) / np.sum(sorted_sample)
 fig, ax1 = plt.subplots()
 ax1.bar(np.arange(len(sorted_sample)), sorted_sample, color='b')
 ax1.set_xlabel('Значення')
 ax1.set_ylabel('Частота', color='b')
 ax1.tick_params(axis='y', labelcolor='b')
 ax2 = ax1.twinx()
-ax2.plot(cum_freq, 'r--')
+ax2.plot(freq, 'r--')
 ax2.set_ylabel('Кумулятивна частота', color='r')
 ax2.tick_params(axis='y', labelcolor='r')
 plt.title('Діаграма Парето')
