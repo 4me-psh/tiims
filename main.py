@@ -11,11 +11,12 @@ sample = np.random.normal(mean, std, n)
 print(sample)
 
 # Будувати полігон
-plt.figure(figsize=(8, 4))
-plt.plot(sample, np.zeros_like(sample), 'o')
+x = np.linspace(0, 132, 132)
+plt.plot(x, sample, ':o')
+plt.grid
 plt.xlabel('Значення')
 plt.title('Полігон')
-plt.show()
+plt.show
 
 # Будувати гістограму частот
 plt.figure(figsize=(8, 4))
